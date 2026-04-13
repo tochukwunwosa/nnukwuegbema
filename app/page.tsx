@@ -102,8 +102,9 @@ export default function GenealogyForm() {
       <div className="max-w-3xl mx-auto space-y-6">
 
         {/* Header */}
-        <div className="sticky z-50 bg-[#1b4332] rounded-xl px-6 py-5"
-          style={{ top: 'var(--safe-top)' }}
+        <div
+          className="sticky z-50 bg-[#1b4332] rounded-xl px-6 py-5"
+          style={{ top: 'env(safe-area-inset-top, 0px)' }}
         >
           <h1 className="text-xl font-semibold text-white tracking-tight">
             Nnukwuegbema family history
