@@ -18,7 +18,7 @@ export default function FamilyInfoSection() {
             {...register('alternativeNames')}
             type="text"
             placeholder="e.g. Okoye (old spelling)"
-            className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
+            className="w-full text-sm rounded-lg px-3 py-2 bg-gray-50 focus:outline-none  focus:border-green-700 transition"
           />
         </div>
 
@@ -30,7 +30,7 @@ export default function FamilyInfoSection() {
             {...register('foundedYear')}
             type="number"
             placeholder="e.g. 1650"
-            className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
+            className="w-full text-sm rounded-lg px-3 py-2 bg-gray-50 focus:outline-none  focus:border-green-700 transition"
           />
         </div>
 
@@ -42,7 +42,7 @@ export default function FamilyInfoSection() {
             {...register('originLocation')}
             type="text"
             placeholder="Village or town of origin"
-            className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
+            className="w-full text-sm rounded-lg px-3 py-2 bg-gray-50 focus:outline-none  focus:border-green-700 transition"
           />
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function FamilyInfoSection() {
           rows={4}
           required
           placeholder="The story of this family — origins, values, significance in the community..."
-          className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition resize-none"
+          className="w-full text-sm rounded-lg px-3 py-2 bg-gray-50 focus:outline-none  focus:border-green-700 transition resize-none"
         />
       </div>
 
@@ -71,7 +71,7 @@ export default function FamilyInfoSection() {
           rows={3}
           required
           placeholder="Chiefs, doctors, community leaders, landmarks..."
-          className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition resize-none"
+          className="w-full text-sm rounded-lg px-3 py-2 bg-gray-50 focus:outline-none  focus:border-green-700 transition resize-none"
         />
       </div>
     </div>

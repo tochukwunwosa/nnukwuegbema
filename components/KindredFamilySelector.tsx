@@ -76,7 +76,7 @@ export default function KindredFamilySelector({
                 const selected = kindreds.find(k => k._id === e.target.value);
                 if (selected) setValue('kindredName', selected.name);
               }}
-              className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
+              className="w-full text-sm rounded-lg px-3 py-2 bg-gray-50 focus:outline-none  focus:border-green-700 transition"
             >
               <option value="">Select kindred...</option>
               {kindreds.map(k => (
@@ -95,7 +95,7 @@ export default function KindredFamilySelector({
             {...register('familyName', { required: true })}
             type="text"
             placeholder="e.g. Okafor"
-            className="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
+            className="w-full text-sm  rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
           />
           {isSearching && (
             <p className="text-xs text-gray-400 mt-1">Checking records...</p>
@@ -108,7 +108,7 @@ export default function KindredFamilySelector({
 
       {/* Decision panel */}
       {showDecision && (
-        <div className="mt-4 rounded-lg border bg-gray-50 p-4">
+        <div className="mt-4 rounded-lg  p-4">
           {/* {existingFamily ? (
             <div className="space-y-3">
               <div>
@@ -154,9 +154,9 @@ export default function KindredFamilySelector({
             <button
               type="button"
               onClick={onCreateNew}
-              className={`text-sm px-4 py-2 rounded-lg border transition font-medium ${mode === 'create'
+              className={`text-sm px-4 py-2 rounded-lg transition font-medium ${mode === 'create'
                 ? 'bg-green-700 text-white border-green-700'
-                : 'border-gray-200 text-gray-700 hover:border-green-700 hover:text-green-700 bg-white'
+                : ' text-gray-700 hover:border-green-700 hover:text-green-700 bg-white'
                 }`}
             >
               Continue

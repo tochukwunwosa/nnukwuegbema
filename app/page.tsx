@@ -98,14 +98,10 @@ export default function GenealogyForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-8">
-      <div className="max-w-3xl mx-auto space-y-6">
+    <>
 
-        {/* Header */}
-        <div
-          className="sticky z-50 bg-[#1b4332] rounded-xl px-6 py-5"
-          style={{ top: 'env(safe-area-inset-top, 0px)' }}
-        >
+      <div className="sticky top-0 z-50 bg-[#1b4332] px-6 py-5 ">
+        <div className="max-w-3xl mx-auto font-display">
           <h1 className="text-xl font-semibold text-white tracking-tight">
             Nnukwuegbema family history
           </h1>
@@ -113,7 +109,10 @@ export default function GenealogyForm() {
             Preserve our village heritage for generations to come
           </p>
         </div>
+      </div>
 
+      {/* Content */}
+      <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-5">
             <KindredFamilySelector
@@ -149,10 +148,9 @@ export default function GenealogyForm() {
                 />
               </>
             )}
-
           </form>
         </FormProvider>
       </div>
-    </div>
+    </>
   );
 }

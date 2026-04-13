@@ -2,7 +2,7 @@
 
 import { useFieldArray, useFormContext } from 'react-hook-form';
 
-const inputCls = 'text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition w-full';
+const inputCls = 'text-sm  rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-700 transition w-full';
 const labelCls = 'block text-xs font-medium text-gray-500 uppercase tracking-wide mb-1';
 
 export default function FamilyMemberForm({
@@ -104,7 +104,7 @@ export default function FamilyMemberForm({
         <button
           type="button"
           onClick={() => appendSpouse({ name: '', marriageYear: '' })}
-          className="mt-3 w-full text-xs border border-gray-300 text-gray-500 hover:border-green-700 hover:text-green-700 hover:bg-green-50 rounded-lg py-2 transition"
+          className="mt-3 w-full text-xs text-gray-500 hover:border-green-700 hover:text-green-700 hover:bg-green-50 rounded-lg py-2 transition"
         >
           Add spouse
         </button>
@@ -140,7 +140,7 @@ export default function FamilyMemberForm({
         <button
           type="button"
           onClick={() => appendChild({ name: '', birthYear: '' })}
-          className="mt-3 w-full text-xs border border-gray-300 text-gray-500 hover:border-green-700 hover:text-green-700 hover:bg-green-50 rounded-lg py-2 transition"
+          className="mt-3 w-full text-xs text-gray-500 hover:border-green-700 hover:text-green-700 hover:bg-green-50 rounded-lg py-2 transition"
         >
           Add child
         </button>

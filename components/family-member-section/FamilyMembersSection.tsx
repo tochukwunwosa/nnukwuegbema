@@ -19,7 +19,7 @@ export default function FamilyMembersSection() {
   });
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-5">
+    <div className="bg-white rounded-xl p-5">
       <h2 className="text-base font-semibold text-gray-800 mb-4">Family members</h2>
 
       <div className="space-y-4">
@@ -36,7 +36,7 @@ export default function FamilyMembersSection() {
       <button
         type="button"
         onClick={() => append(defaultMember)}
-        className="mt-10 w-full text-sm border border-gray-300 text-gray-500 bg-green-900 text-white rounded-lg py-2.5 cursor-pointer font-medium"
+        className="mt-10 w-full text-sm  bg-green-900 text-white rounded-lg py-2.5 cursor-pointer font-medium"
       >
         Add family member
       </button>

@@ -29,7 +29,7 @@ export default function SubmitSection({
           type="button"
           onClick={onClear}
           disabled={disabled}
-          className="flex-1 text-sm border border-gray-200 text-gray-600 hover:bg-gray-50 py-2.5 rounded-lg transition disabled:opacity-50"
+          className="flex-1 text-sm text-gray-600 hover:bg-gray-50 py-2.5 rounded-lg transition disabled:opacity-50"
         >
           Clear form
         </button>
