@@ -5,9 +5,11 @@ import { Toaster } from "sonner";
 import Navbar from "@/components/Navbar";
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
-  viewportFit: 'cover', // iOS safe area support
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: "cover",// iOS safe area support
   themeColor: '#22c55e',
 };
 
