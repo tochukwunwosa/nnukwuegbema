@@ -28,11 +28,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-gray-50 pt-(--safe-top) pb-(--safe-bottom)">
         <Toaster
           position="top-right"
           richColors
-        /> 
+        />
         {children}
       </body>
     </html>

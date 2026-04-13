@@ -84,8 +84,8 @@ export default function GenealogyForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error('Failed');
-      setSubmitStatus('success');
       toast.success('Record saved successfully!');
+      setSubmitStatus('success');
       setSubmitMessage('Record saved successfully.');
       methods.reset();
       setShowForm(false);
@@ -102,7 +102,9 @@ export default function GenealogyForm() {
       <div className="max-w-3xl mx-auto space-y-6">
 
         {/* Header */}
-        <div className="sticky top-0 z-99 bg-[#1b4332] rounded-xl px-6 py-5">
+        <div className="sticky z-50 bg-[#1b4332] rounded-xl px-6 py-5"
+          style={{ top: 'var(--safe-top)' }}
+        >
           <h1 className="text-xl font-semibold text-white tracking-tight">
             Nnukwuegbema family history
           </h1>
@@ -113,7 +115,6 @@ export default function GenealogyForm() {
 
         <FormProvider {...methods}>
           <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-5">
-
             <KindredFamilySelector
               kindreds={kindreds}
               loadingKindreds={loadingKindreds}

@@ -79,10 +79,9 @@ export default function FamilyMemberForm({
         <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Wife / Wives</p>
         <div className="space-y-2">
           {spouseFields.map((s, i) => (
-            <div key={s.id} className="grid grid-cols-[1fr_150px_auto] gap-2 items-center">
+            <div key={s.id} className="grid grid-cols-1 md:grid-cols-[1fr_150px_auto] gap-2 items-center">
               <input
-                {...register(`familyMembers.${memberIndex}.spouses.${i}.name`)}
-                required
+                {...register(`familyMembers.${memberIndex}.spouses.${i}.name`)}                
                 placeholder="Spouse name"
                 className={inputCls}
               />
@@ -116,17 +115,15 @@ export default function FamilyMemberForm({
         <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Children</p>
         <div className="space-y-2">
           {childFields.map((c, i) => (
-            <div key={c.id} className="grid grid-cols-[1fr_150px_auto] gap-2 items-center">
+            <div key={c.id} className="grid grid-cols-1 md:grid-cols-[1fr_150px_auto] gap-2 items-center">
               <input
-                {...register(`familyMembers.${memberIndex}.children.${i}.name`)}
-                required
+                {...register(`familyMembers.${memberIndex}.children.${i}.name`)}                
                 placeholder="Child name"
                 className={inputCls}
               />
               <input
                 type='date'
                 {...register(`familyMembers.${memberIndex}.children.${i}.birthYear`)}
-                required
                 placeholder="Birth year"
                 className={inputCls}
               />
