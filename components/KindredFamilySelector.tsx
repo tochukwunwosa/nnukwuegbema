@@ -143,10 +143,10 @@ export default function KindredFamilySelector({
           ) : ( */}
           <div className="space-y-3">
             <div>
-              <p className="text-xs text-gray-500 mt-0.5">
+              <p className="text-sm text-gray-500 mt-0.5">
                 A new family record will be created.
               </p>
-              <p className="text-sm font-medium text-gray-700">
+              <p className="mt-1 text-xs font-medium text-gray-700">
                 All fields with
                 <span className='text-[#ff385c] ml-1 text-sm'>*</span> are important and must be filled to create the record.
               </p>

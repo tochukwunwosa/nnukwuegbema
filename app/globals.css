@@ -48,6 +48,6 @@ body {
   select,
   textarea,
   button {
-    @apply border border-green-200;
+    @apply border border-green-700;
   }
 }
