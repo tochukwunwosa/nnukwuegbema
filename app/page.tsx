@@ -10,6 +10,7 @@ import StoriesSection from '@/components/StoriesSection';
 import LocationsSection from '@/components/LocationsSection';
 import SubmitSection from '@/components/SubmitSection';
 import { Family } from '@/types';
+import { toast } from 'sonner';
 
 interface FormData {
   kindredId: string;
@@ -84,6 +85,7 @@ export default function GenealogyForm() {
       });
       if (!res.ok) throw new Error('Failed');
       setSubmitStatus('success');
+      toast.success('Record saved successfully!');
       setSubmitMessage('Record saved successfully.');
       methods.reset();
       setShowForm(false);
