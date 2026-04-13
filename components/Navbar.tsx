@@ -3,9 +3,9 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav
-      className="sticky top-0 z-50 bg-[#1b4332] px-6 py-5 safe-top header-sticky"
+      className="sticky top-0 z-50 bg-[#1b4332] px-6 py-5! header-sticky"
     >
-      <div className="max-w-3xl mx-auto font-display">
+      <div className="max-w-3xl w-full mx-auto font-display">
         <h1 className="text-xl font-semibold text-white tracking-tight">
           Nnukwuegbema family history
         </h1>

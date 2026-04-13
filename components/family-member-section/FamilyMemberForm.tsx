@@ -2,7 +2,7 @@
 
 import { useFieldArray, useFormContext } from 'react-hook-form';
 
-const inputCls = 'text-sm  rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-700 transition w-full';
+const inputCls = 'rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-700 transition w-full';
 const labelCls = 'block text-xs font-medium text-gray-500 uppercase tracking-wide mb-1';
 
 export default function FamilyMemberForm({

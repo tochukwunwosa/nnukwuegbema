@@ -68,7 +68,7 @@ export default function KindredFamilySelector({
             Kindred
           </label>
           {loadingKindreds ? (
-            <p className="text-sm text-gray-400">Loading...</p>
+            <p className="text-sm text-gray-400 px-3 py-2 rounded-lg border border-green-700">Loading...</p>
           ) : (
             <select
               {...register('kindredId', { required: true })}
@@ -95,7 +95,7 @@ export default function KindredFamilySelector({
             {...register('familyName', { required: true })}
             type="text"
             placeholder="e.g. Okafor"
-            className="w-full text-sm  rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-600/20 focus:border-green-700 transition"
+            className="w-full rounded-lg px-3 py-2 bg-gray-50 focus:outline-none focus:border-green-700 transition"
           />
           {isSearching && (
             <p className="text-xs text-gray-400 mt-1">Checking records...</p>
