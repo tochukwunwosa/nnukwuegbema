@@ -98,59 +98,44 @@ export default function GenealogyForm() {
   };
 
   return (
-    <>
+    <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
+      <FormProvider {...methods}>
+        <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-5">
+          <KindredFamilySelector
+            kindreds={kindreds}
+            loadingKindreds={loadingKindreds}
+            isSearching={isSearching}
+            searchError={searchError}
+            existingFamily={existingFamily}
+            setExistingFamily={setExistingFamily}
+            setIsSearching={setIsSearching}
+            setSearchError={setSearchError}
+            onCreateNew={() => { setMode('create'); setShowForm(true); }}
+            onEditExisting={() => { setMode('edit'); setShowForm(true); }}
+            mode={mode}
+          />
 
-      <div className="sticky top-0 z-50 bg-[#1b4332] px-6 py-5 ">
-        <div className="max-w-3xl mx-auto font-display">
-          <h1 className="text-xl font-semibold text-white tracking-tight">
-            Nnukwuegbema family history
-          </h1>
-          <p className="text-sm text-white/50 mt-1">
-            Preserve our village heritage for generations to come
-          </p>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-3xl mx-auto px-4 py-6 space-y-5">
-        <FormProvider {...methods}>
-          <form onSubmit={methods.handleSubmit(onSubmit)} className="space-y-5">
-            <KindredFamilySelector
-              kindreds={kindreds}
-              loadingKindreds={loadingKindreds}
-              isSearching={isSearching}
-              searchError={searchError}
-              existingFamily={existingFamily}
-              setExistingFamily={setExistingFamily}
-              setIsSearching={setIsSearching}
-              setSearchError={setSearchError}
-              onCreateNew={() => { setMode('create'); setShowForm(true); }}
-              onEditExisting={() => { setMode('edit'); setShowForm(true); }}
-              mode={mode}
-            />
-
-            {showForm && (
-              <>
-                <FamilyInfoSection />
-                <FamilyMembersSection />
-                <StoriesSection />
-                <LocationsSection />
-                <SubmitSection
-                  submitStatus={submitStatus}
-                  submitMessage={submitMessage}
-                  onClear={() => {
-                    methods.reset();
-                    setSubmitStatus('');
-                    setSubmitMessage('');
-                  }}
-                  disabled={submitStatus === 'submitting'}
-                  existingFamily={existingFamily}
-                />
-              </>
-            )}
-          </form>
-        </FormProvider>
-      </div>
-    </>
+          {showForm && (
+            <>
+              <FamilyInfoSection />
+              <FamilyMembersSection />
+              <StoriesSection />
+              <LocationsSection />
+              <SubmitSection
+                submitStatus={submitStatus}
+                submitMessage={submitMessage}
+                onClear={() => {
+                  methods.reset();
+                  setSubmitStatus('');
+                  setSubmitMessage('');
+                }}
+                disabled={submitStatus === 'submitting'}
+                existingFamily={existingFamily}
+              />
+            </>
+          )}
+        </form>
+      </FormProvider>
+    </div>
   );
 }
